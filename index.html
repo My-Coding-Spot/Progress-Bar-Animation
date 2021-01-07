@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Progress Bar</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="loading">Loading</div>
+        <div class="loadbar">
+            <div class="count">0%</div>
+        </div>
+    </div>
+
+    <script>
+        var number = 1
+        setInterval(() => {
+            document.querySelector('.count').innerHTML = number +'%'
+            if (number < 100) {
+                number += 1
+            }
+
+            else {
+                clearInterval()
+            }
+        }, 65)
+    </script>
+</body>
+
+</html>

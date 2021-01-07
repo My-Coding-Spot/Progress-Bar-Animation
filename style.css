@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #151515;
+}
+
+.loading{
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 3.4em;
+    font-weight: 600;
+}
+
+.loadbar{
+    height: 27px;
+    width: 580px;
+    background: #444444;
+    border-radius: 14px;
+}
+
+.loadbar::before{
+    content: '';
+    position: absolute;
+    height: 27px;
+    width: 0px;
+    background: #cc5303;
+    border-radius: 12px;
+    animation: loading 6.5s linear forwards;
+}
+
+@keyframes loading {
+    100%{
+        width: 580px;
+    }
+}
+
+.count{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: 900;
+}
